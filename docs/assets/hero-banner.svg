@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img" aria-label="2om1c 4nimate Hero Banner">
+  <defs>
+    <linearGradient id="hb_bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050811"/>
+      <stop offset="50%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <radialGradient id="hb_glow_cyan" cx="18%" cy="28%" r="48%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.24"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hb_glow_amber" cx="84%" cy="24%" r="46%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hb_glow_violet" cx="50%" cy="88%" r="45%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hb_divider" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.75"/>
+      <stop offset="50%" stop-color="#a78bfa" stop-opacity="0.85"/>
+      <stop offset="75%" stop-color="#fbbf24" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hb_border" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#334155" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0.45"/>
+    </linearGradient>
+    <pattern id="hb_halftone" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="11" cy="11" r="1.2" fill="#94a3b8" fill-opacity="0.12"/>
+    </pattern>
+    <clipPath id="hb_frame_clip">
+      <rect x="2" y="2" width="1196" height="336" rx="20"/>
+    </clipPath>
+  </defs>
+
+  <rect x="1" y="1" width="1198" height="338" rx="20" fill="url(#hb_bg)" stroke="url(#hb_border)" stroke-width="1.5"/>
+
+  <g clip-path="url(#hb_frame_clip)">
+    <rect x="0" y="0" width="1200" height="340" fill="url(#hb_halftone)"/>
+    <rect x="0" y="0" width="1200" height="340" fill="url(#hb_glow_cyan)"/>
+    <rect x="0" y="0" width="1200" height="340" fill="url(#hb_glow_amber)"/>
+    <rect x="0" y="0" width="1200" height="340" fill="url(#hb_glow_violet)"/>
+
+    <!-- Stylized manga panel accent geometry (kept outer & subtle) -->
+    <g stroke="#38bdf8" stroke-opacity="0.16" stroke-width="1.5" fill="none">
+      <polygon points="24,28 158,28 130,126 24,126"/>
+      <polygon points="36,142 124,142 104,220 36,220" stroke-opacity="0.11"/>
+      <line x1="16" y1="260" x2="140" y2="196" stroke-opacity="0.14"/>
+      <line x1="16" y1="278" x2="112" y2="228" stroke-opacity="0.10"/>
+    </g>
+    <g stroke="#fbbf24" stroke-opacity="0.16" stroke-width="1.5" fill="none">
+      <polygon points="1044,28 1176,28 1176,126 1070,126"/>
+      <polygon points="1076,142 1164,142 1164,220 1096,220" stroke-opacity="0.11"/>
+      <line x1="1060" y1="234" x2="1186" y2="168" stroke-opacity="0.12"/>
+      <line x1="1086" y1="252" x2="1186" y2="200" stroke-opacity="0.09"/>
+    </g>
+  </g>
+
+  <!-- Top eyebrow pill -->
+  <rect x="406" y="34" width="388" height="30" rx="15" fill="#0f172a" fill-opacity="0.88" stroke="#334155" stroke-width="1"/>
+  <circle cx="426" cy="49" r="4" fill="#38bdf8"/>
+  <text x="606" y="54" text-anchor="middle" fill="#cbd5e1" font-family="Segoe UI, Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="700" letter-spacing="1.8">DECLARATIVE MOTION-COMIC STUDIO</text>
+
+  <!-- Hero Title -->
+  <text x="600" y="148" text-anchor="middle" font-family="Segoe UI, Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="76" font-weight="800" letter-spacing="-1">
+    <tspan fill="#38bdf8">2</tspan><tspan fill="#f8fafc">om1c</tspan><tspan fill="#fbbf24" dx="14">4</tspan><tspan fill="#f8fafc">nimate</tspan>
+  </text>
+
+  <!-- Gradient rule -->
+  <rect x="260" y="172" width="680" height="2" rx="1" fill="url(#hb_divider)"/>
+
+  <!-- Decoding Subtitle -->
+  <text x="600" y="210" text-anchor="middle" fill="#cbd5e1" font-family="Segoe UI, Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="20" font-weight="500" letter-spacing="0.2">
+    <tspan fill="#7dd3fc" font-weight="600">2D Comic Art</tspan>
+    <tspan fill="#64748b">  &#8594;  </tspan>
+    <tspan fill="#fcd34d" font-weight="600">4D Living Animation</tspan>
+    <tspan fill="#475569">   |   </tspan>
+    <tspan fill="#e2e8f0">Studio 3022 &amp; Declarative Scene Compiler</tspan>
+  </text>
+
+  <!-- Tech Stack Pills Row (6 pills spanning x=72..1122, centered around 597) -->
+  <g font-family="Segoe UI, Inter, -apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">
+    <!-- Pill 1: React 19 (72..192, w=120) -->
+    <rect x="72" y="248" width="120" height="36" rx="18" fill="#0f172a" stroke="#0284c7" stroke-opacity="0.7" stroke-width="1.2"/>
+    <circle cx="92" cy="266" r="4" fill="#38bdf8"/>
+    <text x="139" y="271" text-anchor="middle" fill="#e0f2fe">React 19</text>
+
+    <!-- Pill 2: Remotion 4 (206..348, w=142) -->
+    <rect x="206" y="248" width="142" height="36" rx="18" fill="#0f172a" stroke="#6366f1" stroke-opacity="0.7" stroke-width="1.2"/>
+    <circle cx="226" cy="266" r="4" fill="#818cf8"/>
+    <text x="284" y="271" text-anchor="middle" fill="#e0e7ff">Remotion 4</text>
+
+    <!-- Pill 3: Vite 8 (362..474, w=112) -->
+    <rect x="362" y="248" width="112" height="36" rx="18" fill="#0f172a" stroke="#8b5cf6" stroke-opacity="0.7" stroke-width="1.2"/>
+    <circle cx="382" cy="266" r="4" fill="#a78bfa"/>
+    <text x="425" y="271" text-anchor="middle" fill="#ede9fe">Vite 8</text>
+
+    <!-- Pill 4: SQLite WAL + FTS5 (488..680, w=192) -->
+    <rect x="488" y="248" width="192" height="36" rx="18" fill="#0f172a" stroke="#10b981" stroke-opacity="0.7" stroke-width="1.2"/>
+    <circle cx="508" cy="266" r="4" fill="#34d399"/>
+    <text x="591" y="271" text-anchor="middle" fill="#d1fae5">SQLite WAL + FTS5</text>
+
+    <!-- Pill 5: MCP 2.0 · 30 Tools (694..880, w=186) -->
+    <rect x="694" y="248" width="186" height="36" rx="18" fill="#0f172a" stroke="#f59e0b" stroke-opacity="0.7" stroke-width="1.2"/>
+    <circle cx="714" cy="266" r="4" fill="#fbbf24"/>
+    <text x="794" y="271" text-anchor="middle" fill="#fef3c7">MCP 2.0 · 30 Tools</text>
+
+    <!-- Pill 6: 20 Comic FX Renderers (894..1122, w=228) -->
+    <rect x="894" y="248" width="228" height="36" rx="18" fill="#0f172a" stroke="#ec4899" stroke-opacity="0.7" stroke-width="1.2"/>
+    <circle cx="914" cy="266" r="4" fill="#f472b6"/>
+    <text x="1015" y="271" text-anchor="middle" fill="#fce7f3">20 Comic FX Renderers</text>
+  </g>
+</svg>
