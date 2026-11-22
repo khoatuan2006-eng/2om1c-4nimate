@@ -21,6 +21,57 @@
 
 ---
 
+## Hình Ảnh Sản Phẩm Thực Tế (Đã Render)
+
+Các khung hình thực tế dưới đây được render trực tiếp qua `ProjectComposition` + `ComicFxOverlays` của **Studio 3022** từ file JSON `scene-plan` khai báo *(đã nén sang WebP siêu nhẹ ~22–63 KB mỗi ảnh; toàn bộ tài nguyên/PSD gốc vẫn giữ cục bộ ngoài git)*.
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/assets/showcase/01-ots-dialogue-dof.webp" alt="Góc máy qua vai (ots) với làm mờ hậu cảnh DoF và bong bóng thoại chỉ miệng" width="100%" />
+      <br />
+      <b>01 · Góc Máy Qua Vai (<code>ots</code>) &amp; Làm Mờ DoF Chọn Lọc</b><br />
+      Tự động làm mờ nhân vật tiền cảnh + nền bokeh, bong bóng thoại chĩa đúng miệng người nói, biểu tượng <code>spark</code> và phụ đề bám nguyên văn.
+    </td>
+    <td width="50%" valign="top">
+      <img src="docs/assets/showcase/02-aura-shout-dialogue.webp" alt="Hiệu ứng aura năng lượng dọc kèm bong bóng hét gai góc và biểu cảm giận dữ" width="100%" />
+      <br />
+      <b>02 · Aura Năng Lượng &amp; Bong Bóng Hét Gai Góc</b><br />
+      Lớp hào quang dọc sau lưng nhân vật, bong bóng biến thể <code>shout</code> viền đỏ gắn miệng người nói cùng phản ứng <code>anger</code>.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/assets/showcase/03-warm-memory-tree.webp" alt="Bộ lọc hồi ức ấm chuẩn CapCut với màu sepia, hạt phim và vệt xước cổ điển" width="100%" />
+      <br />
+      <b>03 · Bộ Lọc Ký Ức Ấm Chuẩn CapCut (<code>flashback</code>)</b><br />
+      Tông phim sepia vàng ấm hoài niệm, ánh sáng xuyên tán lá, vệt xước phim dọc, viền cháy sáng nhẹ và khung điện ảnh letterbox.
+    </td>
+    <td width="50%" valign="top">
+      <img src="docs/assets/showcase/04-golden-hour-memory.webp" alt="Cháy phim hoàng hôn, hạt bokeh trôi và đồng bộ đạo cụ hai nhân vật" width="100%" />
+      <br />
+      <b>04 · Cháy Sáng Hoàng Hôn, Hạt Bokeh &amp; Đạo Cụ Kép</b><br />
+      Lớp hạt bụi sáng lơ lửng, ánh sáng hoàng hôn ấm áp, cặp đạo cụ tay khớp dáng đứng và hộp thoại bố cục thoáng mặt.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/assets/showcase/05-cold-ostracism-spotlight.webp" alt="Bộ lọc ký ức lạnh cô lập kèm đèn spotlight chiếu nổi bật nhân vật" width="100%" />
+      <br />
+      <b>05 · Bộ Lọc Ký Ức Lạnh &amp; Spotlight Cô Lập (<code>flashback-cold</code>)</b><br />
+      Tông xanh thép giảm bão hòa tương phản cao, luồng spotlight tách biệt nhân vật (<code>sweat</code>) trước đám đông chìm trong bóng tối (<code>anger</code>).
+    </td>
+    <td width="50%" valign="top">
+      <img src="docs/assets/showcase/06-prop-physics-trails.webp" alt="Quỹ đạo ném đạo cụ có dư ảnh tốc độ trail, tia va chạm và vạch tốc độ ngang" width="100%" />
+      <br />
+      <b>06 · Vật Lý Ném Đạo Cụ, Dư Ảnh <code>trail</code> &amp; Va Chạm</b><br />
+      Đạo cụ xoay theo quỹ đạo ném kèm dư ảnh tốc độ nhiều lớp, tia nổ <code>impact</code>, vạch tốc độ <code>speed-horiz</code> và làm mờ nền DoF.
+    </td>
+  </tr>
+</table>
+
+---
+
 ## Tổng Quan Thành Quả & Thông Số Đã Kiểm Chứng
 
 <div align="center">
@@ -209,6 +260,7 @@ flowchart TD
 ```text
 2om1c-4nimate/
 ├── docs/assets/                   # Đồ họa vector giới thiệu tương thích GitHub
+│   └── showcase/                  # 6 ảnh WebP sản phẩm thực tế đã nén (~246 KB tổng cộng)
 ├── story_workflow_ui/
 │   ├── visual-editor/             # Lõi Studio 3022, UI React 19, Remotion FX & 96 bộ test
 │   │   ├── scene-plan.mjs         # Trình biên dịch Working Layer v2 + Detach Guard

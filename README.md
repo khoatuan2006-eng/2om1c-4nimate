@@ -21,6 +21,57 @@
 
 ---
 
+## Rendered Output Showcase
+
+Real stills rendered directly through **Studio 3022**'s Remotion `ProjectComposition` + `ComicFxOverlays` from declarative `scene-plan` JSON *(compressed to lightweight WebP thumbnails ~22–63 KB each; source assets remain local-only)*.
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/assets/showcase/01-ots-dialogue-dof.webp" alt="Over-the-shoulder camera with selective depth-of-field blur and speaker-aimed speech bubble" width="100%" />
+      <br />
+      <b>01 · Over-the-Shoulder (<code>ots</code>) Camera &amp; Selective DoF</b><br />
+      Foreground listener blur, bokeh depth separation, auto-aimed comic speech bubble, <code>spark</code> emote, and verbatim bottom subtitle.
+    </td>
+    <td width="50%" valign="top">
+      <img src="docs/assets/showcase/02-aura-shout-dialogue.webp" alt="Procedural energy aura with jagged shout bubble and anger reaction" width="100%" />
+      <br />
+      <b>02 · Procedural Aura &amp; Jagged Shout Sync</b><br />
+      Vertical luminous energy aura, jagged red-accented <code>shout</code> bubble anchored to the active speaker, and <code>anger</code> emote staging.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/assets/showcase/03-warm-memory-tree.webp" alt="Warm nostalgic flashback filter with sepia grade, dappled light, and film scratches" width="100%" />
+      <br />
+      <b>03 · CapCut-Style Warm Memory Filter (<code>flashback</code>)</b><br />
+      Warm sepia color grade, dappled foliage lighting, vertical organic film scratches, warm edge glow, and cinema letterbox framing.
+    </td>
+    <td width="50%" valign="top">
+      <img src="docs/assets/showcase/04-golden-hour-memory.webp" alt="Golden-hour film burn, floating bokeh particles, and dual character prop staging" width="100%" />
+      <br />
+      <b>04 · Golden-Hour Glow, Particles &amp; Dual Props</b><br />
+      Floating bokeh/dust particle overlay, warm film burn wash, paired hand props, and synchronized dialogue panel placement.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/assets/showcase/05-cold-ostracism-spotlight.webp" alt="Cold desaturated memory grading with dramatic spotlight isolation" width="100%" />
+      <br />
+      <b>05 · CapCut-Style Cold Trauma Filter (<code>flashback-cold</code>)</b><br />
+      High-contrast desaturated steel-blue grade with angled spotlight isolation separating protagonist (<code>sweat</code>) from the shadowed crowd (<code>anger</code>).
+    </td>
+    <td width="50%" valign="top">
+      <img src="docs/assets/showcase/06-prop-physics-trails.webp" alt="Thrown prop arc with multi-copy speed afterimage trails and horizontal speed lines" width="100%" />
+      <br />
+      <b>06 · Prop Arc/Spin Physics, Trails &amp; Combat FX</b><br />
+      Multi-copy motion afterimage <code>trail</code>, radial comic <code>impact</code> burst, <code>speed-horiz</code> manga speed lines, and background DoF blur.
+    </td>
+  </tr>
+</table>
+
+---
+
 ## Production Showcase & Verified Engineering Results
 
 <div align="center">
@@ -235,6 +286,7 @@ flowchart TD
 ```text
 2om1c-4nimate/
 ├── docs/assets/                   # GitHub-safe vector showcase graphics
+│   └── showcase/                  # Lightweight (~246 KB total) WebP rendered sample stills
 ├── story_workflow_ui/
 │   ├── visual-editor/             # Core Studio 3022 engine, React 19 UI, Remotion FX & 96 test suites
 │   │   ├── scene-plan.mjs         # Declarative Working Layer v2 DSL compiler + Detach Guard

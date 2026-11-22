@@ -152,6 +152,10 @@ asset_browser/exports/
 *.log
 *.bin
 
+# Allow lightweight compressed showcase frames for GitHub README only
+!docs/assets/showcase/
+!docs/assets/showcase/*.webp
+
 # --- OS ---
 .DS_Store
 Thumbs.db
