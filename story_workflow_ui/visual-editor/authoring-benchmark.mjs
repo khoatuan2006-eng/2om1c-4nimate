@@ -1,0 +1,10 @@
+import {writeFile} from 'node:fs/promises';
+import {applyAuthoringOperations} from './authoring-operations.mjs';
+const args=Object.fromEntries(process.argv.slice(2).map(a=>{const i=a.indexOf('=');return [a.slice(2,i),a.slice(i+1)];}));
+const iterations=Number(args.iterations??100);if(!Number.isInteger(iterations)||iterations<10||iterations>1000)throw Error('Use10–1000iterations');
+const source={id:'bench',duration:300},doc={version:1,revision:0,layers:{}},selection={hero:{name:'Synthetic prepared image',type:'characters',width:100,height:200,parts:[{src:'library-assets/'+'a'.repeat(64)+'.png',left:0,top:0,width:100,height:200}]}};
+const commands=[];for(let i=0;i<50;i++)commands.push({op:'add-character',id:'actor-'+i,asset:'hero',from:0,to:300,placement:{x:100+i%10*150,y:300+Math.floor(i/10)*100,height:150}});for(let i=0;i<50;i++)commands.push({op:'move',layerId:'bench/shot-0/op-actor-'+i,from:0,to:300,delta:{x:100,y:0}});
+for(let i=0;i<10;i++)applyAuthoringOperations(source,doc,commands,selection);
+const samples=[];for(let i=0;i<iterations;i++){const start=performance.now();applyAuthoringOperations(source,doc,commands,selection);samples.push(performance.now()-start);}samples.sort((a,b)=>a-b);
+const result={scope:'Core math/document only; prepared synthetic selection. Excludes catalog, HTTP, file IO, decode, preview and render.',node:process.version,iterations,operationsPerBatch:commands.length,actors:50,medianMs:samples[Math.floor(samples.length*.5)],p95Ms:samples[Math.ceil(samples.length*.95)-1],maxMs:samples.at(-1)};
+if(args.out)await writeFile(args.out,JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result,null,2));

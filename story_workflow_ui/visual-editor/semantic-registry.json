@@ -1,0 +1,299 @@
+{
+  "version": 1,
+  "poseFacing": {
+    "右手向前": "right",
+    "右手出拳": "right",
+    "右手指点": "right",
+    "右手指指点点": "right",
+    "右手打招呼": "right",
+    "右手介绍": "right",
+    "右手伸手": "right",
+    "右手伸展": "right",
+    "右手抬手": "right",
+    "右手握拳": "right",
+    "右手竖中指": "right",
+    "指责": "right",
+    "手指向前": "right",
+    "出拳": "right",
+    "左手向前": "left",
+    "左手出拳": "left",
+    "左手指点": "left",
+    "左手思考指点": "left",
+    "左手叉腰介绍": "left",
+    "站立": "front",
+    "站姿": "front",
+    "叉腰": "front",
+    "双手叉腰": "front",
+    "双手抱胸": "front",
+    "抱胸": "front",
+    "双手摊开": "front",
+    "摊开手": "front",
+    "双手包头": "front",
+    "抱头": "front"
+  },
+  "fxMeta": {
+    "Hiệu ứng va chạm": {
+      "scope": "full-screen",
+      "kind": "impact",
+      "note": "Ảnh vụ nổ đá vỡ che kín toàn khung hình; tránh phủ lên beat đang cần thấy rõ mặt/hành động nhân vật."
+    }
+  },
+  "characterMeta": {
+    "Trẻ em trong hồi ức": { "heightScale": 0.72, "note": "Trẻ nhỏ, luôn thấp hơn người lớn" },
+    "Dân làng": { "heightScale": 1.05 },
+    "Người phụ nữ": { "heightScale": 0.98 },
+    "Người phụ nữ · mẹ": { "heightScale": 0.98 },
+    "Người bảo vệ bến cảng": { "heightScale": 1.15, "note": "PSD có khoảng trống trên đầu nên bù scale" },
+    "白胡子": { "heightScale": 1.24, "note": "Râu Trắng vóc dáng khổng lồ" },
+    "香克斯": { "heightScale": 1.08 },
+    "Mihawk · One Piece": { "heightScale": 1.00 },
+    "克洛克达尔": { "heightScale": 1.04 },
+    "鸣人中期": { "defaultFacing": "right" },
+    "鸣人仙人状态": { "defaultFacing": "right" },
+    "Jiraiya · Tự Lai Dã": { "defaultFacing": "right" },
+    "波风水门": { "defaultFacing": "right" },
+    "漩涡玖辛奈": { "defaultFacing": "right" },
+    "猿飞日斩": { "defaultFacing": "right" },
+    "大蛇丸": { "defaultFacing": "right" },
+    "纲手": { "defaultFacing": "right" },
+    "日向雏田": { "defaultFacing": "right" },
+    "犬冢牙": { "defaultFacing": "right" },
+    "油女志乃": { "defaultFacing": "right" },
+    "夕日红": { "defaultFacing": "right" },
+    "长门": { "defaultFacing": "right" },
+    "Dân làng · cha trong hồi ức": { "defaultFacing": "right" },
+    "绝": { "defaultFacing": "right" },
+    "宇智波带土（晓）": { "defaultFacing": "right" },
+    "暗部（3）": { "defaultFacing": "right" },
+    "鹿丸": { "defaultFacing": "right" },
+    "忍战丁次": { "defaultFacing": "right" },
+    "山中井野": { "defaultFacing": "right" },
+    "春野樱": { "defaultFacing": "right" },
+    "佐助前期": { "defaultFacing": "right" },
+    "卡卡西": { "defaultFacing": "right" },
+    "阿斯玛": { "defaultFacing": "right" }
+  },
+  "locationStages": {
+    "Tường thấp bên trái · hẻm · Chưa duyệt": {
+      "groundY": 1000,
+      "walkableX": [460, 1560],
+      "slots": {
+        "far-left": 460,
+        "left": 600,
+        "center-left": 780,
+        "center": 960,
+        "center-right": 1160,
+        "right": 1360,
+        "far-right": 1560
+      }
+    },
+    "Tàu lớn tại bến": {
+      "groundY": 980,
+      "walkableX": [540, 1580],
+      "forbiddenZones": [
+        { "xMin": 0, "xMax": 460, "label": "mặt nước và bờ đá bên trái bến" }
+      ],
+      "slots": {
+        "far-left": 560,
+        "left": 740,
+        "center-left": 900,
+        "center": 1060,
+        "center-right": 1220,
+        "right": 1380,
+        "far-right": 1540
+      }
+    },
+    "Phố làng": {
+      "groundY": 970,
+      "walkableX": [440, 1480],
+      "forbiddenZones": [
+        { "xMin": 0, "xMax": 380, "label": "bồn hoa & tường nhà bên trái" },
+        { "xMin": 1540, "xMax": 1920, "label": "bồn hoa & tường nhà bên phải" }
+      ],
+      "slots": {
+        "far-left": 460,
+        "left": 640,
+        "center-left": 800,
+        "center": 960,
+        "center-right": 1120,
+        "right": 1280,
+        "far-right": 1450
+      }
+    },
+    "Con hẻm cổ trong thị trấn": {
+      "groundY": 980,
+      "walkableX": [660, 1620],
+      "forbiddenZones": [
+        { "xMin": 120, "xMax": 635, "label": "giếng đá bên trái hẻm" }
+      ],
+      "slots": {
+        "far-left": 690,
+        "left": 840,
+        "center-left": 990,
+        "center": 1140,
+        "center-right": 1300,
+        "right": 1440,
+        "far-right": 1580
+      }
+    },
+    "Văn phòng công nghệ": {
+      "groundY": 1010,
+      "defaultFraming": "bust",
+      "bustY": 1210,
+      "bustScale": 1.24,
+      "walkableX": [340, 1580],
+      "forbiddenZones": [],
+      "slots": {
+        "far-left": 380,
+        "left": 580,
+        "center-left": 780,
+        "center": 960,
+        "center-right": 1160,
+        "right": 1380,
+        "far-right": 1560
+      }
+    },
+    "Văn phòng bừa bộn": {
+      "groundY": 980,
+      "walkableX": [360, 1560]
+    },
+    "Nhà cũ ở làng": {
+      "groundY": 980,
+      "walkableX": [360, 1560]
+    },
+    "Bến gỗ cũ": {
+      "groundY": 980,
+      "walkableX": [380, 1560]
+    },
+    "Bến hàng hóa": {
+      "groundY": 975,
+      "walkableX": [400, 1520],
+      "slots": {
+        "far-left": 430,
+        "left": 640,
+        "center-left": 810,
+        "center": 960,
+        "center-right": 1120,
+        "right": 1300,
+        "far-right": 1490
+      }
+    },
+    "Boong tàu ban đêm": {
+      "groundY": 980,
+      "walkableX": [360, 1560]
+    },
+    "Phòng ngủ trong khoang tàu": {
+      "groundY": 980,
+      "walkableX": [440, 1500]
+    },
+    "Biển rộng · S06": {
+      "groundY": 980,
+      "defaultFraming": "bust",
+      "bustY": 1240,
+      "bustScale": 1.32,
+      "walkableX": [260, 1660],
+      "slots": {
+        "far-left": 300,
+        "left": 640,
+        "center-left": 800,
+        "center": 960,
+        "center-right": 1120,
+        "right": 1280,
+        "far-right": 1620
+      }
+    },
+    "Tàu hải tặc trên biển": {
+      "groundY": 980,
+      "defaultFraming": "bust",
+      "bustY": 1360,
+      "bustScale": 1.24,
+      "walkableX": [300, 1620]
+    },
+    "樱花温泉": {
+      "groundY": 980,
+      "defaultFraming": "bust",
+      "bustY": 1220,
+      "bustScale": 1.24,
+      "walkableX": [360, 1560],
+      "slots": {
+        "far-left": 380,
+        "left": 580,
+        "center-left": 780,
+        "center": 960,
+        "center-right": 1140,
+        "right": 1340,
+        "far-right": 1540
+      }
+    },
+    "城镇屋顶": {
+      "groundY": 855,
+      "shots": { "wide": 520, "medium": 660, "close": 860 },
+      "walkableX": [280, 1340],
+      "slots": {
+        "far-left": 300,
+        "left": 460,
+        "center-left": 600,
+        "center": 1000,
+        "center-right": 1080,
+        "right": 1160,
+        "far-right": 1300
+      }
+    },
+    "火影雕像": {
+      "groundY": 980,
+      "walkableX": [360, 1560]
+    },
+    "Làng Lá · Tượng Hokage": {
+      "groundY": 980,
+      "walkableX": [360, 1560]
+    },
+    "Làng Lá bị Cửu Vĩ tấn công": {
+      "groundY": 980,
+      "walkableX": [360, 1560]
+    },
+    "树林": {
+      "groundY": 980,
+      "walkableX": [380, 1540]
+    },
+    "下水道内部": {
+      "groundY": 980,
+      "walkableX": [380, 1560]
+    },
+    "森林中的大树": {
+      "groundY": 960,
+      "walkableX": [360, 1560]
+    },
+    "Không gian phong ấn Cửu Vĩ": {
+      "groundY": 960,
+      "walkableX": [360, 1620]
+    },
+    "仙山": {
+      "groundY": 960,
+      "walkableX": [360, 1560]
+    },
+    "仙山2": {
+      "groundY": 960,
+      "walkableX": [360, 1560]
+    },
+    "服装店内部": {
+      "groundY": 980,
+      "walkableX": [360, 1560]
+    },
+    "餐厅内部": {
+      "groundY": 980,
+      "walkableX": [360, 1560]
+    },
+    "街道": {
+      "groundY": 980,
+      "walkableX": [360, 1560]
+    },
+    "日式店铺门面": {
+      "groundY": 980,
+      "walkableX": [360, 1560]
+    },
+    "火影会议室": {
+      "groundY": 980,
+      "walkableX": [340, 1580]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+import {taskLayerIds} from './task-layer-bindings.mjs';
+import React from 'react';
+export function ScriptTrace({source,document,frame,onSeek}:{source:any;document?:any;frame:number;onSeek:(frame:number)=>void}){
+ const plan=source?.scriptPlan;if(!plan)return null;
+ return <section aria-label="Chuỗi kịch bản" style={{padding:12,borderTop:'1px solid #444'}}><h3>Chuỗi kịch bản</h3><p>Nguyên văn → hành động → tài nguyên → lời đọc. Chưa duyệt hình ảnh.</p>{plan.tasks.map((t:any)=><details key={t.id} open={frame>=t.from&&frame<t.to}><summary><button onClick={()=>onSeek(t.from)}>{t.id} · {t.action}</button></summary><blockquote>{t.source.quote}</blockquote><p>{t.actor}: {t.before} → {t.after}</p><p>Mẫu diễn: {document?.production?.taskBindings?.[t.id]?.recipeId??t.recipe} · v{document?.production?.taskBindings?.[t.id]?.recipeVersion??'cũ'}</p><p>{document?.production?.taskBindings?.[t.id]?.approximation}</p><p>Giới hạn: {document?.production?.taskBindings?.[t.id]?.acceptedLimits?.join('; ')}</p><p>Cue {t.cueId} · frame {t.from}–{t.to-1}</p><p>Cần thấy: {t.visibleRequirements.join('; ')}</p><p>Tài nguyên: {taskLayerIds(t,document??source.document??{}).map((id:string)=>id.split('/').pop()).join(', ')}</p>{t.gaps.map((g:any,i:number)=><p key={i}>Thiếu: {g.missing}. Xử lý: {g.solution} ({g.status}).</p>)}</details>)}</section>;
+}

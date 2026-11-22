@@ -1,0 +1,38 @@
+/* Keep keyboard focus visible on the editor's dark surfaces. */
+main :is(button, a, input, select, textarea, summary, video, [tabindex]):focus-visible {
+  outline: 2px solid #82e5ca;
+  outline-offset: 2px;
+}
+
+.professional-picker .picker-footer .primary-action {
+  background: #20755f;
+}
+.professional-picker .catalog-card:focus-visible {
+  outline-offset: -2px;
+}
+.professional-picker .image-keyboard-hint {
+  color: #a9bbce;
+  font-size: 10px;
+  line-height: 1.5;
+  margin: 0 0 8px;
+  flex-shrink: 0;
+}
+
+/* Give the resource browser enough height to show complete cards and actions. */
+@media (min-width: 901px) {
+  .workspace.has-library > .layers {
+    grid-row: 1 / -1;
+  }
+  .workspace.has-library .timeline {
+    grid-column: 2 / -1;
+  }
+}
+
+@media (forced-colors: active) {
+  main :is(button, a, input, select, textarea, summary, video, [tabindex]):focus-visible {
+    outline-color: Highlight;
+  }
+}
+
+/* Keep canvas selection handles and authored layer Z below app dialogs. */
+.stage { isolation: isolate; }

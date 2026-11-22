@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowJs": true,
+    "noEmit": true,
+    "paths": {
+      "react": [
+        "../../motion_intro/node_modules/@types/react"
+      ],
+      "react-dom/*": [
+        "../../motion_intro/node_modules/@types/react-dom/*"
+      ],
+      "remotion": [
+        "../../motion_intro/node_modules/remotion"
+      ],
+      "@remotion/player": [
+        "../../motion_intro/node_modules/@remotion/player"
+      ],
+      "@legacy-scenes": [
+        "./legacy-scenes.ts"
+      ]
+    }
+  },
+  "include": [
+    "*.tsx"
+  ],
+  "exclude": [
+    "Scene4Memory.tsx",
+    "PastLifeSequence.tsx",
+    "*.local.*"
+  ]
+}

@@ -1,0 +1,11 @@
+import React,{useEffect,useState} from 'react';
+import {useModal} from './useModal';
+import {draftStore} from './draft-store.mjs';
+import {valueAt} from './model.mjs';
+export function DraftRecoveryDialog({open,projectId,scene,duration,onClose,onSelect}:any){
+ const modal=useModal(open);const [entries,setEntries]=useState<any[]>([]),[busy,setBusy]=useState(false),[error,setError]=useState('');
+ const refresh=()=>setEntries(draftStore.list(projectId,scene,duration));
+ useEffect(()=>{if(open){refresh();setError('');}},[open,projectId,scene,duration]);
+ if(!open)return null;
+ return <div className="create-overlay" onKeyDown={e=>{e.stopPropagation();if(e.key==='Escape'&&!busy)onClose();}}><div className="projects-dialog draft-recovery-dialog" ref={modal} role="dialog" aria-modal="true" aria-label="Nháp đã giữ"><div className="projects-heading"><div><small>PHỤC HỒI CHỈNH SỬA</small><h2>Nháp đã giữ</h2></div><button disabled={busy} aria-label="Đóng nháp" onClick={onClose}>✕</button></div><p>Nháp của scene này trên trình duyệt hiện tại. Xem nháp sẽ mở bước chọn bản cần giữ; chưa ghi vào dự án.</p><button disabled={busy} onClick={refresh}>Đọc lại danh sách nháp</button><div className="draft-recovery-list">{entries.length===0?<p>Chưa có nháp dự phòng cho scene này.</p>:entries.map((entry,index)=><article key={entry.key}><div><strong>Nháp {index+1} · bản {entry.document.revision}</strong><small>{entry.kind==='archive'?'Đã giữ trước khi thay thế':entry.own?'Chưa lưu · cửa sổ này':'Chưa lưu · phiên khác'} · {Object.keys(entry.document.layers).length} đối tượng</small><small>{entry.updatedAt?new Date(entry.updatedAt).toLocaleString('vi-VN'):'Từ phiên trước'}</small><small>X/Y tại frame 0</small>{Object.entries(entry.document.layers as Record<string,any>).slice(0,3).map(([layerId,layer])=><small key={layerId}>{layer.asset?.name??layerId.split('/').pop()} · X {valueAt(layer,0).x} · Y {valueAt(layer,0).y}</small>)}</div><button disabled={busy} aria-label={`Xem nháp ${index+1}`} onClick={async()=>{setBusy(true);setError('');try{await onSelect(entry.document);onClose();}catch(failure:any){setError(failure.message);}finally{setBusy(false);}}}>Xem nháp</button></article>)}</div>{busy&&<p role="status">Đang đọc bản mới để so sánh với nháp…</p>}{error&&<p role="alert" className="create-error">{error}</p>}</div></div>;
+}

@@ -1,0 +1,11 @@
+.editor-error{padding:20px;background:#30232a;color:#fff;border:1px solid #b97682;border-radius:8px;max-width:100%;font:14px/1.5 system-ui}.editor-error button{padding:8px 12px;cursor:pointer}.stage>.editor-error{position:absolute;inset:0;z-index:10000}
+
+.auth-controls{display:flex;align-items:center;gap:6px;margin:0;font-size:12px}.auth-controls a{color:#b8d9ff}
+
+.assembly-panel{padding:12px;border:1px solid #334155;border-radius:8px;margin-bottom:12px;font-size:12px}.assembly-panel label{display:block;margin:8px 0}.assembly-panel select{max-width:100%;width:100%}.assembly-panel small{color:#a6b6ca}
+
+.socket-preview{display:block;width:100%;max-height:260px;background:repeating-conic-gradient(#26303a 0% 25%,#1a222b 0% 50%) 0 0/16px 16px;cursor:crosshair;touch-action:none}.socket-editor p{line-height:1.45}
+
+.tree-toggle,.tree-toggle-placeholder{width:24px;min-width:24px;flex:0 0 24px}.tree-toggle{padding:2px!important;min-height:24px!important}
+
+.socket-preview{width:auto;height:220px;max-height:none;max-width:100%;margin-inline:auto}

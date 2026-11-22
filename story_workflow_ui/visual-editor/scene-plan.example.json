@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "id": "ep02-canis",
+  "title": "Thấy Canis dẫn đầu đám đuổi",
+  "location": { "asset": "Tường thấp bên trái · hẻm · Chưa duyệt" },
+  "cast": {
+    "hero":  { "asset": "Nhật Thành · nguồn cơ thể/face S05", "faceStyle": "detailed" },
+    "canis": { "asset": "Canis", "faceStyle": "detailed" },
+    "crewA": { "asset": "Thuộc hạ A · thủy thủ khiêng người", "faceStyle": "detailed" },
+    "crewB": { "asset": "Thuộc hạ B", "faceStyle": "detailed" }
+  },
+  "transitions": { "in": { "type": "fade-black", "frames": 8 }, "out": { "type": "wipe-left", "frames": 12 } },
+  "beats": [
+    {
+      "id": "b1",
+      "quote": "Thấy gã đội trưởng Canis đang dẫn đầu đám đuổi tới",
+      "frames": 90,
+      "shot": "medium",
+      "actors": [
+        { "who": "hero",  "pose": "站立",     "face": "惊吓", "at": "far-left",     "enter": "pop-in" },
+        { "who": "canis", "pose": "右手向前", "face": "生气", "at": "center-right", "depth": "near", "enter": "pop-in" },
+        { "who": "crewA", "pose": "叉腰",     "face": "生气", "at": "right",        "depth": "mid" },
+        { "who": "crewB", "pose": "指责",     "face": "生气", "at": "far-right",    "depth": "far" }
+      ]
+    },
+    {
+      "id": "b2",
+      "quote": "khóe môi cậu khẽ nhếch lên một nụ cười giễu cợt lạnh lùng",
+      "frames": 60,
+      "shot": "close",
+      "actors": [ { "who": "hero", "pose": "叉腰", "face": "坏笑", "at": "center" } ],
+      "fx": [ { "effect": "Hiệu ứng va chạm", "at": 20, "frames": 8 } ]
+    }
+  ]
+}
